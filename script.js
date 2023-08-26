@@ -15,8 +15,14 @@ for (let i = 0; i < btnOpenModal.length; i++) {
   });
 }
 
-// Close modal event listener
-btnCloseModal.addEventListener("click", () => {
+// Close modal function
+const closeModal = () => {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
-});
+};
+
+// Close modal event listener
+btnCloseModal.addEventListener("click", closeModal);
+
+// Closing the modal upon clicking the modal
+overlay.addEventListener("click", closeModal);
